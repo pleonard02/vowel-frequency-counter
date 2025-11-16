@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vowel Frequency Counter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Vowel Freqency Counter</h1>
+      <p class="subtitle">
+        Paste or write some text and see how often each vowel appears (including
+        accented vowels).
+      </p>
+      <section class="input-section">
+        <label for="textInput">Your text</label>
+        <textarea
+          id="textInput"
+          rows="8"
+          placeholder="Type or paste text here..."
+        ></textarea>
+        <div class="options">
+          <label>
+            <input type="checkbox" id="normalizeAccents" checked />
+            Treat accented vowels as their base (á → a, é → e, etc.).
+          </label>
+          <label>
+            <input type="checkbox" id="caseInsensitive" checked />
+            Case Insensitive
+          </label>
+        </div>
+        <button id="countButton">Count Vowels</button>
+      </section>
+      <section class="results-section" id="resultsSection" hidden>
+        <h2>Results</h2>
+        <p id="summaryText"></p>
+        <table>
+          <thead>
+            <tr>
+              <th>Vowel</th>
+              <th>Count</th>
+            </tr>
+          </thead>
+          <tbody id="resultsTableBody">
+            <tr id="aFamily">
+              <td>A</td>
+              <td>0</td>
+            </tr>
+            <tr id="eFamily">
+              <td>E</td>
+              <td>0</td>
+            </tr>
+            <tr id="iFamily">
+              <td>I</td>
+              <td>0</td>
+            </tr>
+            <tr id="oFamily">
+              <td>O</td>
+              <td>0</td>
+            </tr>
+            <tr id="uFamily">
+              <td>U</td>
+              <td>0</td>
+            </tr>
+            <tr id="yFamily">
+              <td>Y</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <script src="vowelFrequencyCounter.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
